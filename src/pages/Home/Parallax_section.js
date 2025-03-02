@@ -76,7 +76,7 @@ function Parallax() {
                                         <li><span>Model Deployment and Serving:</span> TensorFlow Serving, MLflow, TorchServe</li>
                                         <li><span>Experiment Tracking and Versioning:</span> MLflow, DVC (Data Version Control)</li>
                                         <li><span>Model Monitoring and Management:</span> Prometheus, Grafana, Evidently AI</li>
-                                        <li><span>Workflow Automation:</span> Github Actions, Jenkins, Airflow</li>                                       
+                                        <li><span>Workflow Automation:</span> Github Actions, Jenkins, Airflow, Databricks</li>                                       
                                         {/* <li><span>Workflow Automation:</span> Kubeflow, Apache Airflow, Jenkins</li>                                        */}
                                     </ul>
                                 </div>
@@ -97,7 +97,7 @@ function Parallax() {
                                         {/* <li><span>Big Data Management:</span> Hadoop, Spark, Databricks</li> */}
                                         <li><span>Big Data Management:</span> Hadoop, Spark, Databricks</li>
                                         {/* <li><span>Real-Time Data Processing:</span> Apache Kafka, Apache Flink, Streamlit</li> */}
-                                        <li><span>Real-Time Data Processing:</span> Streamlit</li>
+                                        <li><span>Real-Time Data Processing & Apps:</span> Streamlit</li>
                                     </ul>
                                 </div>
 

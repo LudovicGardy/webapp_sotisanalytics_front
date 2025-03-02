@@ -31,9 +31,9 @@ function Introduction() {
           </h1>
           <p>
             Building a data-driven technological solution that adheres to the highest standards of quality and sustainability is challenging. 
-            I am here to assist you in constructing and designing: <span>A data architecture tailored to your needs</span> | High-performance 
+            I am here to assist you in constructing and designing: <span>Data pipelines tailored to your needs</span> | High-performance 
             artificial intelligence models | <span>Interactive and intuitive data visualization solutions</span> | Real-time data processing 
-            solutions | <span>Large-scale data processing solutions</span> | Secure data processing solutions | <span>Ethical data processing 
+            solutions | <span>Large-scale data processing solutions</span> | Scalable and secured technological solutions | <span>Ethical data processing 
             solutions.</span>
           </p>
 

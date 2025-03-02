@@ -59,7 +59,7 @@ function Cards() {
             <Card_item
               src="/images/LG_imgs/img4.png"
               // text="Smart data management"
-              label="DEPLOYMENT | MLOps"
+              label="MLOPS | DATAOPS"
               path="/services"
               // href="https://www.linkedin.com/in/ludovic-gardy/"
               />

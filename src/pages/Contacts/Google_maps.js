@@ -105,8 +105,8 @@ return (
             style={mapStyles}
             styles={greyStyle}
             initialCenter={{
-            lat: 43.695653,
-            lng: 7.277631,
+            lat: 48.883577,
+            lng: 2.2694351,
             }}
             onClick={onMapClicked}
         >

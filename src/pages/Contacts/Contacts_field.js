@@ -72,7 +72,7 @@ const Contact_Field = () => {
         </div>
       </div>
       <div className="purple_container map_info">
-        <h2>From Le Mans or Paris to Anywhere</h2>
+        <h2>From Laval, Le Mans or Paris to Anywhere</h2>
         <p> Based in France, I am perfectly positioned to collaborate with clients both locally and internationally. Whether you are close by or across the globe, I offer flexible working modes — be it fully remote or a balanced hybrid approach.</p>
       </div>
     </div>
