@@ -1,4 +1,3 @@
-
 # Web Application Codebase
 
 ## Application Overview
@@ -31,6 +30,49 @@ Each component is crafted to highlight a particular aspect of data science or we
 
 ## Repository Purpose
 While it includes elements that are typical in data science projects, such as data visualization and analysis, the primary focus is on demonstrating the application's structure and the use of technologies like React and Python.
+
+## Run with Docker
+To run this application using Docker:
+
+1. Build the Docker image:
+   ```bash
+   docker build -t webapp-sotisanalytics .
+   ```
+
+2. Run the container:
+   ```bash
+   docker run -p 3000:3000 webapp-sotisanalytics
+   ```
+
+3. Access the application in your browser at:
+   ```
+   http://localhost:3000
+   ```
+
+## Run Without Docker
+To run this application directly:
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run start
+   ```
+
+3. For production build:
+   ```bash
+   npm run build
+   serve -s build
+   ```
+   Note: You may need to install serve globally using `npm install -g serve`
+
+4. Access the application in your browser at:
+   ```
+   http://localhost:3000
+   ```
 
 ---
 
