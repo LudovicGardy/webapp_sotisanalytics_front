@@ -61,10 +61,10 @@ function Testimonials() {
 
         </div> */}
 
-          </div>
+        </div>
         
         </>
-      );
+    );
     }
-  
-  export default Testimonials;
+
+export default Testimonials;
