@@ -45,7 +45,7 @@ function Footer() {
               <h2 className="logo-h2">Sotis A.I.</h2>
             </Link>
           </div>
-          <small className="website-rights">React Technology © 2023</small>
+          <small className="website-rights">React Technology © 2025</small>
           <div className="social-icons">
             <div className="social-icon-link youtube">
                 <a target="_blank" href="https://www.linkedin.com/company/sotis-advanced-insights" className="fab fa-linkedin" id="linkedin"/>
