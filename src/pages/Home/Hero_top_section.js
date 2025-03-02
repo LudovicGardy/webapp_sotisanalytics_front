@@ -32,9 +32,9 @@ function HeroSection() {
           className="btns" 
           buttonStyle="btn_primary"
           buttonSize="btn_large"
-          redirection="/data-science"
+          redirection="/testimonials"
         >
-          DATA SCIENCE 
+          TESTIMONIALS 
         </Button>
       </div>
     </div>
