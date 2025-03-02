@@ -54,7 +54,7 @@ function Signal_Processing() {
           </div>
 
         <div className="services-transition">
-          <p>Many of the projects I have worked on in recent years have involved signal processing, especially time series and 3-D medical images.
+          <p>Many of the projects I have worked on in recent years have involved signal processing, especially time series and 3D medical images.
             Whether audio, EEG, EMG, waves, vibrations, stock market or financial curves, analysis of 
             these signals requires very specific techniques to clean them up, normalize them, transform them and derive insights from them.
           </p>
@@ -118,12 +118,12 @@ function Signal_Processing() {
           </div>
           <div className="services-content-text">
             <div className="services-content-left-title-wrapper">
-              <h4 className="services-content-left-title">3-D Medical Images Visualization</h4>
+              <h4 className="services-content-left-title">3D Medical Images Visualization</h4>
               <p className="news-text"><FontAwesomeIcon icon={faCalendarCheck} title="Problem or requet" className="services-icon subtitle-icons"/> 2019</p>
             </div>
             <ul className="services-content-ul">
               <li><FontAwesomeIcon icon={faPersonCircleQuestion} title="Problem or requet" className="services-icon"/>
-              Visualization enhancement of 3-D brain images for localization of cortical areas, using convolution and threshold methods.</li>
+              Visualization enhancement of 3D brain images for localization of cortical areas, using convolution and threshold methods.</li>
               <li><FontAwesomeIcon icon={faScrewdriverWrench} title="Tools" className="services-icon"/>
               Python · proprietary and open source formats (DICOM, NIfTI) ·  Docker · JSON.</li>
               <li><FontAwesomeIcon icon={faSliders} title="Methods" className="services-icon"/>

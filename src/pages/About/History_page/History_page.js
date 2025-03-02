@@ -57,8 +57,8 @@ function HistoryPage() {
                             <div className={styles.myDate}>June 2023</div>
                             <div className={styles.myTitle}>Founder of Sotis A.I.&#174;</div>
 
-                            <div className={styles.myDescr}>Sotis AI® specializes in developping advanced data engineering pipelines
-                                and artificial intelligence solutions that transform complex data into strategic insights for businesses.</div>
+                            <div className={styles.myDescr}>Sotis AI® specializes in developping powerful and scalable machine learning
+                                based technological solutions to make better business decisions and profits.</div>
                         </li>
                         {/* <li className={styles.myLi} style={{'--accent-color': '#6e51a8'}}>
                         <div className={styles.myDate}>August 2023</div>
