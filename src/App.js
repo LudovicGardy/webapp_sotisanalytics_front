@@ -39,7 +39,7 @@ function App() {
       {loading ? ( // display the preloader if loading is true
         <div className="preloader">
             {/* <img src="./../images/gif/loader/loading.GIF" alt="Loading..." /> */}
-            <img src="https://elasticbeanstalk-eu-north-1-643287291923.s3.eu-north-1.amazonaws.com/loader_square.gif" alt="Loading..." />
+            <img src="images/gif/loader/loader_square.gif" alt="Loading..." />
         </div>
       ) : (
         <Router>
