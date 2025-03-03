@@ -22,7 +22,7 @@ function TestimonialsCarousel() {
       async function fetchData() {
         try {
           // const response = await fetch('http://127.0.0.1:8000/api/getData');
-          const response = await fetch('https://back.sotisai.com/api/getData');
+          const response = await fetch('https://back.sotisai.com:8000/api/getData');
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
