@@ -37,7 +37,7 @@ export const ButtonTestimonials = ({
     // notamment en vous assurant que vous gérez correctement les erreurs et que vous utilisez HTTPS.       
       const urls = [
         'http://127.0.0.1:8000/api/submitTestimonial', 
-        'https://back.sotisai.com:8000/api/submitTestimonial'
+        'https://back.sotisai.com/api/submitTestimonial'
       ];
       
       for (const url of urls) {
