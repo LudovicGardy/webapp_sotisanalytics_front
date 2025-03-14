@@ -5,7 +5,7 @@ FROM node:16-alpine
 WORKDIR /app
 
 # Installe les dépendances
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json .
 RUN npm install
 
 # Copie le code source dans le conteneur
