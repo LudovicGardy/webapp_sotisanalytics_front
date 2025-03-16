@@ -1,18 +1,32 @@
-# Utilise une image de base Node
-FROM node:16-alpine
+# Build stage
+FROM node:18-alpine AS builder
 
-# Définit le répertoire de travail
+# Set working directory
 WORKDIR /app
 
-# Installe les dépendances
-COPY package.json package-lock.json .
-RUN npm install
+# Copy package files first (for better cache utilization)
+COPY package*.json ./
 
-# Copie le code source dans le conteneur
+# Install dependencies
+RUN npm ci
+
+# Copy source files
 COPY . .
 
-# Construit l'application
+# Build the application
 RUN npm run build
 
-# Commande pour lancer l'application
-CMD ["npm", "start"]
+# Production stage
+FROM nginx:alpine
+
+# Copy custom nginx configuration BEFORE static files (important for layering and cache)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy built files from builder stage
+COPY --from=builder /app/build /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Nginx starts automatically
+CMD ["nginx", "-g", "daemon off;"]
