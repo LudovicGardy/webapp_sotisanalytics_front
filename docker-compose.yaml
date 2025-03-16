@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "80:80"  # Exposer le port 80 au lieu de 3000 pour correspondre à la config nginx
+      - "3000:80"  # Exposer le port 3000 à l'extérieur, mais garder 80 en interne pour nginx
     # Les volumes sont commentés car ils peuvent causer des problèmes en production
     # Les volumes sont utiles en développement mais peuvent causer des problèmes sur Coolify
     # volumes:
