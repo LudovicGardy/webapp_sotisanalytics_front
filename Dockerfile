@@ -1,35 +1,32 @@
-# Étape de build
-FROM node:16-alpine AS builder
+# Build stage
+FROM node:18-alpine AS builder
 
-# Définit le répertoire de travail
+# Set working directory
 WORKDIR /app
 
-# Copie les fichiers de package.json
+# Copy package files first (for better cache utilization)
 COPY package*.json ./
 
-# Installe les dépendances
-RUN npm install
+# Install dependencies
+RUN npm ci
 
-# Copie tous les fichiers source
+# Copy source files
 COPY . .
 
-# Construit l'application
+# Build the application
 RUN npm run build
 
-# Étape de production - utilisation de serve pour servir les fichiers statiques
-FROM node:16-alpine
+# Production stage
+FROM nginx:alpine
 
-# Définit le répertoire de travail
-WORKDIR /app
+# Copy nginx configuration if needed
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Installe serve globalement
-RUN npm install -g serve
+# Copy built files from builder stage
+COPY --from=builder /app/build /usr/share/nginx/html
 
-# Copie uniquement le répertoire build depuis l'étape précédente
-COPY --from=builder /app/build ./build
+# Expose port 80
+EXPOSE 80
 
-# Expose le port 3000
-EXPOSE 3000
-
-# Commande pour servir les fichiers statiques
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Nginx starts automatically
+CMD ["nginx", "-g", "daemon off;"]
