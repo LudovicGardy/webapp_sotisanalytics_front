@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "type": "dockerfile",
+    "buildpack": null,
+    "autodeploy": true,
+    "dockerfile": "Dockerfile",
+    "port": 3000,
+    "env": [
+        {
+            "name": "NODE_ENV",
+            "value": "production"
+        }
+    ],
+    "volumes": []
+}

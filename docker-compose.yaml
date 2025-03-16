@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   app:
     build:
@@ -5,11 +7,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    volumes:
-      - ./:/app
-      - /app/node_modules
+    # Les volumes sont commentés car ils peuvent causer des problèmes en production
+    # Les volumes sont utiles en développement mais peuvent causer des problèmes sur Coolify
+    # volumes:
+    #   - ./:/app
+    #   - /app/node_modules
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
     restart: unless-stopped
 
   # Si vous avez besoin d'une base de données, décommentez ce service
