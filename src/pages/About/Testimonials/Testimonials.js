@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Testimonials.css";
 import TestimonialsCarousel from "./Testimonials_carousel_item";
 import Footer from "../../../components/Footer/Footer";
 
