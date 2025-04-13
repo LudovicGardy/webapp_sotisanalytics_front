@@ -1,4 +1,5 @@
-/* Timeline */
+/* === Base Layout === */
+
 .timelineh1 {
   padding-bottom: 40px;
 }
@@ -13,10 +14,12 @@
   column-gap: var(--col-gap);
   list-style: none;
   width: min(60rem, 90%);
-  margin-inline: auto;  
+  margin-inline: auto;
+  position: relative;
 }
 
-/* line */
+/* === Timeline Line === */
+
 .myUl::before {
   content: "";
   grid-column: 1;
@@ -25,46 +28,42 @@
   border-radius: calc(var(--line-w) / 2);
 }
 
-/* columns*/
+/* === Timeline Items === */
 
-/* row gaps */
-.myUl .myLi:not(:last-child) {
-  margin-bottom: var(--row-gap);
-}
-
-/* card */
 .myUl .myLi {
   grid-column: 2;
-  --inlineP: 1.5rem;
-  margin-inline: var(--inlineP);
   grid-row: span 2;
   display: grid;
   grid-template-rows: min-content min-content min-content;
   background-color: #fff;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
 }
 
-/* date */
+/* Espacement entre les éléments sauf le dernier */
+.myUl .myLi:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+/* === Date Badge === */
+
 .myUl .myLi .myDate {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
-
   text-align: center;
   background-color: var(--accent-color);
-
   color: white;
   font-size: 1.25rem;
   font-weight: 600;
-
   display: grid;
   place-content: center;
   position: relative;
-
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 }
 
-/* date flap */
-.myUl .myLi .date::before {
+/* Flap sous la date */
+.myUl .myLi .myDate::before {
   content: "";
   width: var(--inlineP);
   aspect-ratio: 1;
@@ -72,12 +71,11 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
   position: absolute;
   top: 100%;
-
-  clip-path: polygon(0 0, 100% 0, 0 100%);
   right: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
-/* circle */
+/* Cercle connecté à la ligne */
 .myUl .myLi .myDate::after {
   content: "";
   position: absolute;
@@ -87,12 +85,12 @@
   border: 0.3rem solid var(--accent-color);
   border-radius: 50%;
   top: 50%;
-
   transform: translate(50%, -50%);
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-/* title descr */
+/* === Title & Description === */
+
 .myUl .myLi .myTitle,
 .myUl .myLi .myDescr {
   background: var(--bgColor);
@@ -100,19 +98,22 @@
   padding-inline: 1rem;
   line-height: 1.5;
 }
+
 .myUl .myLi .myTitle {
   overflow: hidden;
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
 }
+
 .myUl .myLi .myDescr {
   padding-block-end: 1.5rem;
   font-weight: 300;
 }
 
-/* shadows */
-.myUl .myLi .timyTitletle::before,
+/* === Decorative Shadows === */
+
+.myUl .myLi .myTitle::before,
 .myUl .myLi .myDescr::before {
   content: "";
   position: absolute;
@@ -124,6 +125,7 @@
   filter: blur(4px);
   transform: translate(-50%, 50%);
 }
+
 .myUl .myLi .myTitle::before {
   bottom: calc(100% + 0.125rem);
 }
@@ -133,23 +135,31 @@
   bottom: 0.25rem;
 }
 
+/* === Responsive (≥ 40rem) === */
+
 @media (min-width: 40rem) {
   .myUl {
     grid-template-columns: 1fr var(--line-w) 1fr;
   }
+
   .myUl::before {
     grid-column: 2;
   }
+
   .myUl .myLi:nth-child(odd) {
     grid-column: 1;
   }
+
   .myUl .myLi:nth-child(even) {
     grid-column: 3;
   }
 
-  /* start second card */
   .myUl .myLi:nth-child(2) {
-    grid-row: 2/4;
+    grid-row: 2 / 4;
+  }
+
+  .myUl .myLi:nth-child(odd) .myDate {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 
   .myUl .myLi:nth-child(odd) .myDate::before {
@@ -161,15 +171,15 @@
     transform: translate(-50%, -50%);
     left: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
-  .myUl .myLi:nth-child(odd) .myDate {
-    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
-  }
 }
+
+/* === Credits === */
 
 .credits {
   margin-top: 1rem;
   text-align: right;
 }
+
 .credits a {
   color: var(--color);
 }

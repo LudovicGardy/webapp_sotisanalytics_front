@@ -1,116 +1,108 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ButtonTestimonials } from "./Testimonials_carousel_item_button";
 import './Testimonials_carousel_item.css';
 
 function TestimonialsCarousel() {
-    // const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [testimonials, setTestimonials] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const textRef = useRef(null);
 
-    // let min = 0;
-    // let max = text_EN.length - 1;
-    // let rndInt = Math.floor(Math.random() * (max - min + 1) + min);
-    // console.log(rndInt);
-    // const [currentImageIndex, setCurrentImageIndex] = useState(rndInt);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        // const response = await fetch('http://127.0.0.1:8000/api/getData');
+        const response = await fetch('https://aokg04owccog44g408s484kk.sotisai.com/api/getData');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        setTestimonials(data);
 
-    let nbComments = 9
-    let rndInt = Math.floor(Math.random() * nbComments);
-
-    const [testimonials, setTestimonials] = useState([]);
-    const [currentImageIndex, setCurrentImageIndex] = useState(rndInt);
-  
-    useEffect(() => {
-      // Fonction pour récupérer les témoignages depuis l'API
-      async function fetchData() {
-        try {
-          // const response = await fetch('http://127.0.0.1:8000/api/getData');
-          const response = await fetch('https://aokg04owccog44g408s484kk.sotisai.com/api/getData');
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          const data = await response.json();
-          setTestimonials(data);
-        } catch (error) {
-          console.error('An error occurred while fetching testimonials:', error);
-        }
+        // Initialisation aléatoire APRÈS chargement des données
+        const rndIndex = Math.floor(Math.random() * data.length);
+        setCurrentIndex(rndIndex);
+      } catch (error) {
+        console.error('An error occurred while fetching testimonials:', error);
       }
-  
-      fetchData();
-    }, []);
+    }
 
+    fetchData();
+  }, []);
 
-  // Fonction JavaScript pour changer la couleur
-  function handleColorChange() {
-    let textDiv = document.querySelector('.testimonials_individual_card_text');
-    // textDiv.style.backgroundColor = 'rgba(240, 220, 255, 1)';
-    textDiv.style.opacity = 0.5;
+  const handleColorChange = () => {
+    if (textRef.current) {
+      textRef.current.style.opacity = 0.5;
+      setTimeout(() => {
+        textRef.current.style.opacity = 1;
+      }, 900);
+    }
+  };
 
-
-    // setTimeout(() => {
-    //   textDiv.style.backgroundColor = 'white';
-    // }, 300);
-    
-    setTimeout(() => {
-      textDiv.style.opacity = 1;
-    }, 900);
-
-  }
-
-
-
-  function handlePrevious() {
-    setCurrentImageIndex(currentImageIndex === 0 ? testimonials.length - 1 : currentImageIndex - 1);
+  const handlePrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
     handleColorChange();
   };
 
-  function handleNext() {
-    setCurrentImageIndex(currentImageIndex === testimonials.length - 1 ? 0 : currentImageIndex + 1);
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
     handleColorChange();
   };
 
-  function handleClick() {
-    window.open(testimonials[currentImageIndex]?.social, '_blank');
+  const handleClick = () => {
+    const url = testimonials[currentIndex]?.social;
+    if (url) window.open(url, '_blank');
+  };
+
+  if (testimonials.length === 0) {
+    return <div className="testCards_container">Loading testimonials...</div>;
   }
+
+  const current = testimonials[currentIndex];
 
   return (
     <div className="testCards_container">
       <div className="testCards_wrapper">
-        {/* <Fade duration={2000}> */}
-          <div className="testimonials_carousel">
-            <div className="testimonials_individual_card">
-              <div className="testimonials_individual_card_image">
-                <a href={testimonials[currentImageIndex]?.social} target="_blank" rel="noopener noreferrer">
-                  <img src={testimonials[currentImageIndex]?.image} alt="testimonials" />
-                </a>
-                <p className='card-title'> {testimonials[currentImageIndex]?.name} </p>
-                <p> {testimonials[currentImageIndex]?.profession} </p>
-                {/* <p> {employers[currentImageIndex]} </p> */}
+        <div className="testimonials_carousel">
+          <div className="testimonials_individual_card">
+            <div className="testimonials_individual_card_image">
+              <a href={current?.social} target="_blank" rel="noopener noreferrer">
+                <img src={current?.image} alt="testimonials" />
+              </a>
+              <p className="card-title">{current?.name}</p>
+              <p>{current?.profession}</p>
 
-                {/* <progress value={currentImageIndex+1} max={text_EN.length} id="imageProgress"></progress> */}
-                  <div className="progress-bar">
-                  <div className="progress-bar-fill" style={{width: `${(currentImageIndex+1)*100/testimonials.length }%`}}></div>
-                </div>
-
-                <div className="arrow-container">
-                  <div className="arrow arrow-left arrow-testimonials hover-color-1"><i className="fas to-left" onClick={handlePrevious}></i></div>
-                  <div className="arrow arrow-right arrow-testimonials hover-color-2"><i className="fas to-right" onClick={handleNext}></i></div>
-                </div>
+              <div className="progress-bar">
+                <div
+                  className="progress-bar-fill"
+                  style={{ width: `${((currentIndex + 1) * 100) / testimonials.length}%` }}
+                ></div>
               </div>
-              <div className="testimonials_individual_card_text">
-                <p> {testimonials[currentImageIndex]?.text_EN} </p>
+
+              <div className="arrow-container">
+                <div className="arrow arrow-left arrow-testimonials hover-color-1">
+                  <i className="fas to-left" onClick={handlePrevious}></i>
+                </div>
+                <div className="arrow arrow-right arrow-testimonials hover-color-2">
+                  <i className="fas to-right" onClick={handleNext}></i>
+                </div>
               </div>
             </div>
-              <ButtonTestimonials
-                className="btns"
-                buttonStyle="btn--third"
-                buttonSize="btn--large3"
-                redirection="/contact"
-                >   
-                Leave a review
-              </ButtonTestimonials>
+
+            <div className="testimonials_individual_card_text" ref={textRef}>
+              <p>{current?.text_EN}</p>
+            </div>
           </div>
-        {/* </Fade> */}
+
+          <ButtonTestimonials
+            className="btns"
+            buttonStyle="btn--third"
+            buttonSize="btn--large3"
+            redirection="/contact"
+          >
+            Leave a review
+          </ButtonTestimonials>
+        </div>
       </div>
     </div>
   );
 }
-  
+
 export default TestimonialsCarousel;
