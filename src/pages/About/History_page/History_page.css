@@ -13,7 +13,7 @@
 
 .banners-icon {
     color: rgb(240,240,240);
-  }
+}
 
 /* Intro */
 .about-transition {
@@ -166,7 +166,6 @@
     }
 
 }
-
 
 @media only screen and (max-width: 500px) {
     .about-content-text p {
