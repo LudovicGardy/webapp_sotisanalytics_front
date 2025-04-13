@@ -19,37 +19,6 @@ function HistoryPage() {
                     <h1 className="banners-title">ABOUT</h1>
                 </div>
 
-                <div className="testimonials-container">
-
-                    {/* <div className="testimonials-transition">
-                    <h1>Turning your data into a valuable product</h1>
-                </div>
-                <div className="testimonials-content reverse-flex-row">
-                    <div className="testimonials-content-img">
-                            <img src="/images/gardy_black_bg.jpg"></img>
-                    </div>
-
-                    <div className="services-quote-text testimonials-quote-text">
-                        <figure className="services-figure figure-large">
-                            <blockquote className="blockquote">
-                                <p>In today's data-rich environment, extracting relevant, actionable information can 
-                                    be challenging, regardless of whether the data is collected by established procedures 
-                                    or by modern tools in a continuous stream. The goal is the same: to leverage this 
-                                    wealth of information to propel your business. As an independent data scientist, 
-                                    I transform your data into crucial insights, driving growth in your present 
-                                    and future ventures.</p>
-
-                                <figcaption className="figcaption">
-                                    <span className="figcaption-span-services">Ludovic Gardy</span>
-                                </figcaption>
-                            </blockquote>
-                        </figure>
-                    </div>
-                </div> */}
-
-                </div>
-
-                {/* #3c3c4b  #6e51a8 #e24A68 */}
                 <div className="about-transition">
                     <h1 className={styles.timelineh1}>Brief history</h1>
                     <ul className={styles.myUl}>
