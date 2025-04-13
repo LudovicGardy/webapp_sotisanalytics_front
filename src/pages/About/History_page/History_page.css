@@ -12,10 +12,10 @@
 }
 
 .banners-icon {
-    color: rgb(240,240,240);
+    color: rgb(240, 240, 240);
 }
 
-/* Intro */
+/* === Intro === */
 .about-transition {
     display: flex;
     flex-direction: column;
@@ -24,11 +24,11 @@
     max-width: 1500px;
     margin-bottom: 30px;
     justify-content: center;
-    text-align: center;  
+    text-align: center;
     padding-top: 50px;
 }
-      
-/* Content */
+
+/* === Content === */
 .about-content {
     display: flex;
     flex-direction: row;
@@ -38,8 +38,14 @@
     height: 450px;
 }
 
-.break {
-    color:white;
+.about-content-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 66.66%;
+    flex-grow: 0;
+    background-color: #fff;
+    padding: 30px;
+    margin: 5px;
 }
 
 .about-content-text p {
@@ -47,60 +53,49 @@
     font-size: 18px;
     width: 100%;
     height: 100%;
-    top:0;
+    top: 0;
     left: 0;
+}
+
+.about-content-text span {
+    font-weight: 500;
+    color: rgb(50, 50, 50);
 }
 
 .about-content-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 33.33%; /* occupe 1/3 de la largeur */
-    flex-grow: 0; /* ne se développe pas pour occuper plus d'espace */
+    flex-basis: 33.33%;
+    flex-grow: 0;
     margin: 5px;
-}
-
-.about-content-text {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 66.66%; /* occupe 2/3 de la largeur */
-    flex-grow: 0; /* ne se développe pas pour occuper plus d'espace */
-    background-color: #fff;
-    padding: 30px;
-    margin: 5px;
-    /* background-color: red; */
-}
-
-.about-content-text span {
-    font-weight: 500;
-    color: rgb(50,50,50);
 }
 
 .about-content img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border: 1px solid rgb(50,50,50);
+    border: 1px solid rgb(50, 50, 50);
 }
 
-/* Ending */
+.break {
+    color: white;
+}
+
+/* === Ending === */
 .about_ending {
     display: flex;
     flex-direction: column;
-    align-self: left;
+    align-self: center;
     width: 100%;
     max-width: 1500px;
     margin-bottom: 30px;
     padding: 5px;
     justify-content: center;
-    text-align: center;  
-    align-self:center;
+    text-align: center;
 }
 
-.about_ending h1 {
-    padding: 20px;
-}
-
+.about_ending h1,
 .about_ending h3 {
     padding: 20px;
 }
@@ -111,72 +106,67 @@
 
 .about_ending span {
     font-weight: 500;
-    color: rgb(50,50,50);
+    color: rgb(50, 50, 50);
 }
 
 .about_button {
-    background-color: rgb(175,125,250);
+    background-color: rgb(175, 125, 250);
     color: #fff;
     width: 200px;
     align-self: center;
     height: 50px;
 }
 
-.about_paragraph {
-    
-}
-
 .about_button:hover {
-    background-color: rgba(175,125,250,0.5);
+    background-color: rgba(175, 125, 250, 0.5);
 }
 
+/* === Responsive === */
 @media only screen and (max-width: 1400px) {
     .about-content {
-      height: 600px;
+        height: 600px;
     }
-}  
+}
 
 @media only screen and (max-width: 1300px) {
     .about-content-text p {
         font-size: 16px;
-    }  
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     .about-content {
-      flex-direction: column;
-      height: auto;
-      border: none;
-      background-color: rgb(30,30,30);
+        flex-direction: column;
+        height: auto;
+        background-color: rgb(30, 30, 30);
     }
 
     .about-content-img {
         width: 300px;
         align-self: center;
-   }
+    }
 
-   .about-content-text p {
-    font-size: 18px;
-    }  
-}  
+    .about-content-text p {
+        font-size: 18px;
+    }
+}
 
 @media only screen and (max-width: 750px) {
     .about_ending p {
         text-align: justify;
     }
-
 }
 
 @media only screen and (max-width: 500px) {
     .about-content-text p {
         width: 180%;
-        transform : translateX(-100px);
-    }  
+        transform: translateX(-100px);
+    }
 }
 
 @media only screen and (max-width: 450px) {
     .about-content-text p {
         width: 250%;
-        transform : translateX(-120px);
-    }  
+        transform: translateX(-120px);
+    }
 }
