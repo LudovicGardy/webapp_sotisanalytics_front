@@ -7,18 +7,18 @@ import "../../App.css";
 import Footer from "../../components/Footer/Footer";
 
 // Composants spécifiques Contact
-import Contact_Banner from "./Contacts_banner";
-import Contact_Field from "./Contacts_field";
+import ContactBanner from "./Contacts_banner";
+import ContactField from "./Contacts_field";
 import GoogleApiWrapper from "./Google_maps";
-import ContactInfo from "./Contacts_info";
+// import ContactInfo from "./Contacts_info";
 // import Contact_Schedule from "./Contact/Contact_Schedule";
 
 function Contact() {
   return (
     <main className="contact-page">
-      <Contact_Banner />
+      <ContactBanner />
       {/* <Contact_Schedule /> */}
-      <Contact_Field />
+      <ContactField />
       {/* <ContactInfo /> */}
       <GoogleApiWrapper />
       <Footer />
