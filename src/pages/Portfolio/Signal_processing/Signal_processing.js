@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaQuoteLeft } from 'react-icons/fa';
 import Footer from "../../../components/Footer/Footer";
-import Partners from "../../Home/Scrolling_banner_section";
 
 import "../../../App.css";
 import "../Portfolio.css";

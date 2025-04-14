@@ -2,7 +2,6 @@ import React from "react";
 import Footer from "../../../components/Footer/Footer";
 import Dashboards_images from "./Dashboards_images";
 import Data_workflow from "./Data_workflow";
-import Partners from "../../Home/Scrolling_banner_section";
 
 import "../../../App.css";
 import "../Portfolio.css";

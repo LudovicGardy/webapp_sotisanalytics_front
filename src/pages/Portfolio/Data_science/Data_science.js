@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Modal from 'react-modal';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import Footer from "../../../components/Footer/Footer";
-import Partners from "../../Home/Scrolling_banner_section";
 import "../../../App.css";
 import "../Portfolio.css";
 

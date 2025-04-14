@@ -5,7 +5,6 @@ import ScreenshotsArea2 from "./Screenshots2";
 import ScreenshotsArea3 from "./Screenshots3";
 import Dev_squares from "./Dev_squares";
 import Dev_types from "./Dev_types";
-import Partners from "../../Home/Scrolling_banner_section";
 
 import "../../../App.css";
 import "../Portfolio.css";
