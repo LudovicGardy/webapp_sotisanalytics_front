@@ -221,19 +221,18 @@
 }
 
 @media only screen and (max-width: 400px) {
-
   .cards {
-    padding: 5px;
-    padding-bottom: 20px;
+    padding: 5px 5px 20px;
   }
-  
+
   .cards__wrapper {
     flex-direction: column;
-    height: 100%;
+    height: auto;
   }
+
   .cards__item {
     width: 100%;
-  }  
-  
-
+    margin-bottom: 20px;
+  }
 }
+
