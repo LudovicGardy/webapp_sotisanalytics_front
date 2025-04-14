@@ -1,74 +1,32 @@
+/* === Base Layout === */
 .contact_main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100%;
+    width: 100%;
     background-color: rgb(240, 240, 240);
-    width: 100%;
 }
 
-.contact_container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 1500px;
-    align-self: center;
-    /*margin-bottom: 10vh;*/
-}
-
-.thankyou_container {
-    width: 100%;
-    height: 300px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 1500px;
-    align-self: center;
-    /*margin-bottom: 10vh;*/
-    /*background-color: green;*/
-}
-
-
+/* === Shared Container === */
+.contact_container,
 .purple_container {
-    display: flex;
-    flex-direction: column;
-    /* background-color: rgb(175,125,250,0.5); */
-    height: 900px;
     width: 100%;
     max-width: 1500px;
-    padding: 5px;
-    /* border-top: 3px solid rgb(50,50,50); */
-    /* border-bottom: 3px solid rgb(50,50,50); */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 50px 5px;
+    text-align: center;
+    align-self: center;
 }
 
 .contact_wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    color: rgb(50,50,50);
     width: 100%;
     height: 100%;
+    color: rgb(50, 50, 50);
 }
 
-.calendar_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 900px;
-    width: 100%;    
-}
-
+/* === Text and Titles === */
 .purple_container h2 {
     text-align: center;
 }
@@ -80,93 +38,72 @@
 
 .map_info {
     height: 400px;
-    padding-top: 50px;
     margin-top: 50px;
+    padding-top: 50px;
 }
 
 .map_info p {
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
-.ID_container {
+/* === Form Layout === */
+.form_style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_block {
     position: relative;
+    padding: 5px;
+    width: 100%;
+    display: flex;
     justify-content: center;
     text-align: center;
-    padding: 5px;
-    height: 100px;
-    /*background-color: red;*/
 }
 
-.message_container {
-    position: relative;
-    justify-content: center;
-    text-align: center;
-    padding: 5px;
-    height: 100%;
-    /*background-color: yellow;*/
-}
-
+/* === Form Fields === */
 .field_style {
-    position: relative;
     width: 80%;
-    height: 100%;
-    /*background-color: orange;*/
-    padding:10px;
+    padding: 10px;
 }
 
 .field_style:hover {
-    color: rgb(50,50,50);
-    border: 2px solid rgb(50,50,50);
+    color: rgb(50, 50, 50);
+    border: 2px solid rgb(50, 50, 50);
 }
 
-.button_container {
-    position: relative;
-    justify-content: center;
-    text-align: center;
-    padding: 5px;
-    height: 25%;
-}
-
+/* === Buttons === */
 .button_style {
-    position: relative;
     width: 100%;
-    height: 100%;
-    background-color: rgb(50,50,50);
+    background-color: rgb(50, 50, 50);
+    color: #fff;
+    font-size: 18px;
     padding: 8px 20px;
     border: 1px solid #242424;
     transition: all 0.3s ease-out;
-    color: #fff;
-    font-size: 18px;
 }
 
 .button_style:hover {
-  transition: all 0.3s ease-out;
-  background-color: rgb(70,70,70);
-  transition: 250ms;
-  border: 2px solid rgb(50,50,50);
+    background-color: rgb(70, 70, 70);
+    border: 2px solid rgb(50, 50, 50);
 }
 
-.contact_container h1 {
-    text-align: left;
-    padding: 20px;
+/* === Error Message === */
+.error_message {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
-.calendar_intro {
-    padding: 50px;
-    padding-bottom: 0px;
-}
-
+/* === Responsive === */
 @media only screen and (max-width: 600px) {
     .purple_container {
-        width: 100%;
         padding: 5px;
         margin: 0;
     }
 
     .map_info p {
-        text-align: justify
-
+        text-align: justify;
     }
-
 }
-
