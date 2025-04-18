@@ -1,7 +1,7 @@
 # Web Application Codebase
 
 ## Application Overview
-This repository hosts the code for a web application that integrates data science and web development concepts. Website is available at [https://www.sotisanalytics.com](https://www.sotisanalytics.com).
+This repository hosts the code for a web application that integrates data science and web development concepts. Website is available at [https://www.sotisai.com](https://www.sotisai.com).
 
 ## Technology Stack
 - **React**: Used for crafting the user interface, showcasing the use of React components and state management.
