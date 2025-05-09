@@ -50,9 +50,8 @@ const Contact_Field = () => {
               <h2>Get in touch</h2>
               <p>
                 Use the form or send your message to
-                contact@sotisai.com
+                ludovic.g@sotisai.com
               </p>
-
               <form className="form_style" onSubmit={handleSubmit}>
                 <div className="form_block">
                   <input
@@ -102,6 +101,16 @@ const Contact_Field = () => {
               or across the globe, I offer flexible working modes — be it fully
               remote or a balanced hybrid approach.
             </p>
+          </div>
+          <div className="button_rdv_container">
+            <a
+              className="button_style"
+              href="https://calendly.com/ludovic-g-sotisai"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Rendez-vous: let's talk
+            </a>
           </div>
         </>
       )}

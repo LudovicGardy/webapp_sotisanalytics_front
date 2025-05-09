@@ -9,7 +9,6 @@ import Footer from "../../components/Footer/Footer";
 // Composants spécifiques Contact
 import ContactBanner from "./Contacts_banner";
 import ContactField from "./Contacts_field";
-import GoogleApiWrapper from "./Google_maps";
 // import ContactInfo from "./Contacts_info";
 // import Contact_Schedule from "./Contact/Contact_Schedule";
 
@@ -20,7 +19,7 @@ function Contact() {
       {/* <Contact_Schedule /> */}
       <ContactField />
       {/* <ContactInfo /> */}
-      <GoogleApiWrapper />
+      {/* <GoogleApiWrapper /> */}
       <Footer />
     </main>
   );
