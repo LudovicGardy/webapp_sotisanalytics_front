@@ -1,16 +1,4 @@
-// import React from 'react';
-// import './Button.css';
-// import { Link } from 'react-router-dom';
-
-// export function Button() {
-//   return (
-//     <Link to='sign-up'>
-//       <button className='btn'>Sign Up</button>
-//     </Link>
-//   );
-// }
-
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import "./Buttons.css";
 
@@ -24,7 +12,11 @@ export const Button = ({
   onClick,
   buttonStyle,
   buttonSize,
-  redirection="about"
+  redirection = "about",
+  href,
+  target,
+  rel,
+  className = ""
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -32,8 +24,31 @@ export const Button = ({
 
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
+  // Détection lien externe
+  const link = href || redirection;
+  const isExternal = /^https?:\/\//i.test(link);
+
+  if (isExternal) {
+    return (
+      <a
+        href={link}
+        className={`btn-mobile ${className}`}
+        target={target}
+        rel={rel}
+      >
+        <button
+          className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+          onClick={onClick}
+          type={type}
+        >
+          {children}
+        </button>
+      </a>
+    );
+  }
+
   return (
-    <Link to={redirection} className="btn-mobile">
+    <Link to={link} className={`btn-mobile ${className}`}>
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}

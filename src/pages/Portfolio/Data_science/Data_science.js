@@ -1,21 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import Modal from 'react-modal';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
-import Footer from "../../../components/Footer/Footer";
+import React, { useState } from "react";
 import "../../../App.css";
+import Footer from "../../../components/Footer/Footer";
 import "../Portfolio.css";
 
 import Modal_component from "../../../components/Modal_component";
 
+import { faCalendarCheck, faCircleInfo, faHandshake, faPersonCircleQuestion, faRocket, faScrewdriverWrench, faSliders, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faPersonCircleQuestion } from '@fortawesome/free-solid-svg-icons';
-import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
-import { faSliders } from '@fortawesome/free-solid-svg-icons';
-import { faHandshake } from '@fortawesome/free-solid-svg-icons';
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
-import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
-import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 // https://fontawesome.com/v6/icons?q=Table&o=r&s=solid
 
@@ -78,7 +69,7 @@ function Data_Science() {
               <li><FontAwesomeIcon icon={faSliders} title="Methods" className="services-icon"/> 
               To be accessible to as many people as possible but also to compare the performance of the models, the user can choose a model (GPT? LLama2? Mistral?) and its size (7B? 13B?).</li>
               <li><FontAwesomeIcon icon={faHandshake} title="Delivered to (organization)" className="services-icon"/> 
-              Developed as an open source project: <a target="_blank" href="https://immo.sotisanalytics.com" className="advertise_link">click here to start the app <FontAwesomeIcon icon={faRocket} title="Date" className="services-icon subtitle-icons"/></a></li>
+              Developed as an open source project: <a target="_blank" href="https://immo.sotisai.com" className="advertise_link">click here to start the app <FontAwesomeIcon icon={faRocket} title="Date" className="services-icon subtitle-icons"/></a></li>
               <li><FontAwesomeIcon icon={faCircleInfo} title="Additional info." className="services-icon"/> 
               This personalized assistant has been added as an optional feature to Sotis Immobilier. Users can choose to enable it or not. For now, they must use their own API key.</li>
             </ul>
@@ -105,7 +96,7 @@ function Data_Science() {
               <li><FontAwesomeIcon icon={faSliders} title="Methods" className="services-icon"/> 
               Integrated official government datasets and scraped data over real estate agencies to provide up-to-date, accurate insights into real estate trends.</li>
               <li><FontAwesomeIcon icon={faHandshake} title="Delivered to (organization)" className="services-icon"/> 
-              Developed as an open source project: <a target="_blank" href="https://immo.sotisanalytics.com" className="advertise_link">click here to start the app <FontAwesomeIcon icon={faRocket} title="Date" className="services-icon subtitle-icons"/></a></li>
+              Developed as an open source project: <a target="_blank" href="https://immo.sotisai.com" className="advertise_link">click here to start the app <FontAwesomeIcon icon={faRocket} title="Date" className="services-icon subtitle-icons"/></a></li>
               <li><FontAwesomeIcon icon={faCircleInfo} title="Additional info." className="services-icon"/> 
               User-friendly web app, offering easy navigation and tailored insights to a wide range of users from potential homebuyers to real estate professionals.</li>
             </ul>

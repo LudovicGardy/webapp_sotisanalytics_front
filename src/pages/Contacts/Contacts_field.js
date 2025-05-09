@@ -50,7 +50,7 @@ const Contact_Field = () => {
               <h2>Get in touch</h2>
               <p>
                 Use the form or send your message to
-                contact@sotisanalytics.com
+                contact@sotisai.com
               </p>
 
               <form className="form_style" onSubmit={handleSubmit}>

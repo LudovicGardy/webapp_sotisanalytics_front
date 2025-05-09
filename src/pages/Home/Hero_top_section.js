@@ -27,9 +27,11 @@ function HeroSection() {
           className="btns"
           buttonStyle="btn_reverse"
           buttonSize="btn_large"
-          redirection="/about"
+          href="https://calendly.com/ludovic-g-sotisai"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          HISTORY
+          RENDEZ-VOUS
         </Button>
         <Button
           className="btns"

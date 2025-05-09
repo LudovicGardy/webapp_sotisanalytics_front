@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./Legal_info/Legal_info.css";
+import React from "react";
 import Footer from "./Footer/Footer";
+import "./Legal_info/Legal_info.css";
 
 
 function TrustSecurity() {
@@ -24,7 +24,7 @@ function TrustSecurity() {
             prevent attempted security breaches. We also carry out regular security audits to ensure that our 
             security measures are constantly maintained and improved. We are committed to protecting your data 
             and treating it with the utmost respect. If you have any questions about the security of your data, 
-            please do not hesitate to contact us at contact@sotisanalytics.com.</p>
+            please do not hesitate to contact us at contact@sotisai.com.</p>
 
       </div>
 

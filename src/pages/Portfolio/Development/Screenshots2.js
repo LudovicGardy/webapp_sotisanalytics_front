@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Fade, LightSpeed, Zoom } from 'react-reveal';
+import { Fade } from 'react-reveal';
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faArrowCircleLeft, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
@@ -61,7 +61,7 @@ function ScreenshotsArea2() {
                         The platform is backed by a rich database, including records of over 18.9 million properties from 2018 to 2022, geographic information for all French cities, 
                         and additional related data, all securely stored in AWS S3 buckets and Google Cloud NoSQLdatabases. For real-time insights in 2023, a web scraping robot actively 
                         scans real estate agency websites to collect, clean, and analyze current listings. Sotis Immobilier aims to be the go-to resource for investors, real estate agents, 
-                        and anyone keen on the French property market. <a target="_blank" href="https://www.sotisanalytics.immo">The app is available here</a>.
+                        and anyone keen on the French property market. <a target="_blank" href="https://immo.sotisai.com">The app is available here</a>.
                         </p>
                   </div>
               </div>

@@ -1,10 +1,10 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
-  faSquarePhone,
   faSquareEnvelope,
+  faSquarePhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 
 import "../../App.css";
 import "./Contacts_info.css";
@@ -23,7 +23,7 @@ function ContactInfo() {
         </div>
         <div className="vertical-box-info">
           <FontAwesomeIcon icon={faSquareEnvelope} className="contactIcon_style" />
-          <p>contact@sotisanalytics.com</p>
+          <p>contact@sotisai.com</p>
         </div>
       </div>
     </div>
