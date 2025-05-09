@@ -114,7 +114,7 @@ function Data_Science() {
               <li><FontAwesomeIcon icon={faPersonCircleQuestion} title="Problem or requet" className="services-icon"/> 
               Training of specific language models, before the advent of current simplified techniques.</li>
               <li><FontAwesomeIcon icon={faScrewdriverWrench} title="Tools" className="services-icon"/> 
-              Python · PyQt · LLM Transformers · Langchain parsing and embedding · Pinecone verctor databse · OpenAI API · AWS EC2 · Github.</li>
+              Python · PyQt · LLM Transformers · Langchain parsing and embedding · Pinecone verctor databse · Llama2 · AWS EC2 · Github.</li>
               <li><FontAwesomeIcon icon={faSliders} title="Methods" className="services-icon"/> 
               Leveraged data from various sources such as French Labor Code, Digestive Oncology Thesaurus, sports books, and customer information for model training.</li>
               <li><FontAwesomeIcon icon={faHandshake} title="Delivered to (organization)" className="services-icon"/> 

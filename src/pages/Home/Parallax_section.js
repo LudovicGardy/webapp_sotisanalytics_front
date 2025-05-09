@@ -1,7 +1,6 @@
 import React from "react";
-import "./Parallax_section.css";
-import { Fade, LightSpeed, Zoom } from 'react-reveal';
 import Profile from "./Parallax_profile";
+import "./Parallax_section.css";
 
 function Parallax() {
   return (
@@ -72,7 +71,7 @@ function Parallax() {
                                     <h4>Artificial Intelligence and MLOps</h4>
                                     <ul>
                                         <li><span>Machine Learning and AI:</span> Embeddings, Computer Vision, CNN, LLM, NLP</li>
-                                        <li><span>NLP Integration and Models:</span> OpenAI API, Langchain, Llama</li>
+                                        <li><span>NLP Integration and Models:</span> OpenAI API, Langchain, Llama2</li>
                                         <li><span>Model Deployment and Serving:</span> TensorFlow Serving, MLflow, TorchServe</li>
                                         <li><span>Experiment Tracking and Versioning:</span> MLflow, DVC (Data Version Control)</li>
                                         <li><span>Model Monitoring and Management:</span> Prometheus, Grafana, Evidently AI</li>
