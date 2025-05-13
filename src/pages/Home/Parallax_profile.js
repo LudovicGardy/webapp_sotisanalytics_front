@@ -29,7 +29,7 @@ function Profile() {
 
             <figcaption className="figcaption">
               <span className="figcaption-span-services" style={{ backgroundColor: "white" }}>
-                Ludovic
+                Ludovic Gardy
               </span>
             </figcaption>
           </blockquote>
