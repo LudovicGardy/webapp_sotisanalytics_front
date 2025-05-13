@@ -1,7 +1,6 @@
 import React from "react";
-import "./Cards_section.css";
 import CardItem from "./Card_item";
-import { Fade } from 'react-reveal';
+import "./Cards_section.css";
 
 
 function Cards() {
@@ -14,7 +13,7 @@ function Cards() {
             <CardItem
               src="/images/LG_imgs/img5.png"
               // text="Project design and data collection"
-              label="DATA GOVERNANCE"
+              label="DATA STRATEGY"
               path="/services"
               // href="https://www.linkedin.com/in/ludovic-gardy/"
               />
@@ -24,7 +23,7 @@ function Cards() {
             <CardItem
               src="/images/LG_imgs/img1.png"
               // text="Statistical analysis and modeling"
-              label="DATA ENGINEERING"
+              label="SCALABLE ARCHITECTURES"
               path="/services"
               // href="https://www.linkedin.com/in/ludovic-gardy/"
             />
@@ -36,7 +35,7 @@ function Cards() {
             <CardItem
               src="/images/LG_imgs/img6.png"
               // text="Storytelling and dashboards"
-              label="DATA ANALYTICS"
+              label="EFFICIENCE & QUALITY"
               path="/services"
               // href="https://www.linkedin.com/in/ludovic-gardy/"
               />
@@ -69,7 +68,7 @@ function Cards() {
             <CardItem
               src="/images/LG_imgs/img2.png"
               // text="Decision support and automation"
-              label="REPORTING"
+              label="PRODUCTION READY"
               path="/services"
               // href="https://www.linkedin.com/in/ludovic-gardy/"
               />
